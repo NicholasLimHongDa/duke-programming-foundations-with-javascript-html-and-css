@@ -1,0 +1,27 @@
+// write your code here
+var x = 3;
+var y = 2;
+var z = x + 2*y;
+y = x;
+print (x);
+print (y);
+
+var image = new SimpleImage("chapel.png");
+print(image);
+
+function printDims(image){
+    x = image.getWidth();
+    y = image.getHeight();
+    print(`The width of the image is ${x} pixels`);
+    print(`The height of the image is ${y} pixels`);
+}
+
+printDims(image);
+
+function square(x){
+	var ans = x*x;
+	return ans;
+}
+
+var y = square(4);
+print (y);

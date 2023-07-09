@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try It! Buttons with Divs</title>
+    <link rel="stylesheet" href="styles-colorful.css">
+</head>
+<body>
+    <h1>Buttons with Divs</h1>
+    <div id="div1" class="orangeback">Button One</div>
+    <div id="div2" class="pinkback">Button Two</div>
+    <form>
+        <input class="clickable-button" type="button" value="Click Me">
+    </form>
+    <p id="transform">Click the button and watch this text <em>transform</em></p>
+    <p><a href="html-canvas.html"><em>Click here </em></a>to go to html-canvas</p>
+
+    <script>
+        var btn = document.querySelector("input");
+
+        function changeColor(){
+            var divElement1 = document.getElementById("div1");
+            var divElement2 = document.getElementById("div2");
+            const backColors = ['orangeback', 'pinkback', 'blueback', 'blackback'];
+            divElement1.className = backColors[Math.floor(Math.random()*4)];
+            divElement2.className = backColors[Math.floor(Math.random()*4)];
+        }
+
+        btn.addEventListener('click', function(){
+            var bool = confirm('The button was pressed.\n');
+            var txt = document.querySelector("p");
+            changeColor();
+            if (bool == true){
+                txt.innerHTML = "<p>You clicked OK</p>";
+            }
+            else {
+                txt.innerHTML = "<p>Why didn't you click OK?</p>";
+            }
+        })
+        console.log("Done");
+    </script>
+
+</body>
+</html>

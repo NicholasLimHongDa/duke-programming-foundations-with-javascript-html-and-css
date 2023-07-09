@@ -1,0 +1,25 @@
+h1 {
+    font-family: arial;
+}
+
+div {
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid black;
+    font-size: 16px;
+}
+
+#button1 {
+    background-color: lightgrey;
+    color: white;
+}
+
+#button2 {
+    background-color: orange;
+    color: black;
+}
+
+p {
+    font-family: arial;
+}

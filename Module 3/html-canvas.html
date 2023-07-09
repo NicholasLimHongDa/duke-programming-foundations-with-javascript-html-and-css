@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using HTML5 Canvas</title>
+    <link rel="stylesheet" href="html-canvas-styles.css">
+</head>
+<body>
+    <h1>Toward a Canvas</h1>
+    <canvas id="d1">
+        Hello
+    </canvas>
+    <p><input type="button" value="Make lime" onclick="doLime()"> <input type="button" value="Make yellow" onclick="doYellow()"></p>
+
+    <script>
+        function doLime(){
+            var dd1 = document.getElementById("d1");
+            dd1.style.backgroundColor="lime";
+        }
+
+        function doYellow(){
+            var dd1 = document.getElementById("d1");
+            dd1.style.backgroundColor="white";
+            var ctx = dd1.getContext("2d");
+            ctx.fillStyle = "yellow"
+            ctx.fillRect(10, 10, 40, 40);
+            ctx.font = "30px Arial";
+            ctx.fillText("There are yellow rectangles above", 20, 80);
+        }
+    </script>
+</body>
+</html>

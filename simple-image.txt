@@ -1,0 +1,14 @@
+// write your code here
+var image = new SimpleImage(200,200);
+print("This is the initial image");
+print(image);
+
+for (var pixel of image.values()){
+    // yellow has an R and G value of 255
+    pixel.setRed(255);
+    pixel.setGreen(255);
+    pixel.setBlue(0);
+}
+
+print("This is the resultant image");
+print(image);
